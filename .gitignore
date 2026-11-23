@@ -1,0 +1,26 @@
+# Virtual machine appliances and disk images (too large for GitHub)
+*.ova
+*.ovf
+*.vdi
+*.vmdk
+*.vhd
+*.iso
+apresentacao_protocolo/vms/
+
+# Python cache and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Compiled C++ / NS-3 build outputs
+atividade_3/build/
+*.o
+*.out
+core
+core.*
+
+# OS / Editor artifacts
+.DS_Store
+*.swp
+*~
