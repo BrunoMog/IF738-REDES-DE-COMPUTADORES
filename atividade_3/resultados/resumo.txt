@@ -1,0 +1,29 @@
+============================================================
+RESUMO DA SIMULACAO NS-3 (TOPOLOGIA DUMBBELL)
+Gargalo: 100Mbps | Delay: 10ms | Fila: DropTail (100p)
+============================================================
+VAZAO MEDIA (1.0s - 15.0s, janela = 14.0s):
+  Fluxo 1 (UDP 3Mbps, No 3 -> No 0):   2.9965 Mbps (5243904 bytes recebidos)
+  Fluxo 2 (TCP Bulk,  No 4 -> No 1):   94.9195 Mbps (166109184 bytes recebidos)
+  Fluxo 3 (TCP Custom,No 5 -> No 2):   0.2000 Mbps (350000 bytes recebidos | 7 blocos de 50KB enviados)
+
+RTT MEDIO (Trace TcpSocketBase):
+  Fluxo 2 (TCP Bulk):                  26.3194 ms (55075 amostras)
+  Fluxo 3 (TCP Custom):                33.8641 ms (105 amostras)
+
+JANELA DE CONGESTIONAMENTO (cwnd):
+  Fluxo 2 (TCP Bulk):                  Media = 338.1537 KB | Max = 644.8125 KB
+  Fluxo 3 (TCP Custom):                Media = 86.7636 KB | Max = 234.7344 KB
+
+GARGALO (Fila DropTail em R2 -> R1):
+  Pacotes enfileirados:                120090
+  Pacotes descartados (Drops):         0
+  Taxa de Descarte (Drop Rate):        0.0000 %
+
+DETALHES FLOWMONITOR (POR FLUXO IP):
+  Flow 1 (TCP 10.1.4.1:49153 -> 10.3.1.2:5001) | TxPkts=114986 RxPkts=114720 Lost=259 | AvgOneWayDelay=16.2923 ms | FlowMonTp=98.3284 Mbps
+  Flow 2 (TCP 10.1.5.1:49153 -> 10.3.2.2:5002) | TxPkts=284 RxPkts=249 Lost=0 | AvgOneWayDelay=17.0728 ms | FlowMonTp=0.2074 Mbps
+  Flow 3 (UDP 10.1.3.1:49153 -> 10.3.0.2:5000) | TxPkts=5126 RxPkts=5121 Lost=4 | AvgOneWayDelay=16.1881 ms | FlowMonTp=3.0785 Mbps
+  Flow 4 (TCP 10.3.1.2:5001 -> 10.1.4.1:49153) | TxPkts=58372 RxPkts=58372 Lost=0 | AvgOneWayDelay=10.0052 ms | FlowMonTp=1.7507 Mbps
+  Flow 5 (TCP 10.3.2.2:5002 -> 10.1.5.1:49153) | TxPkts=143 RxPkts=143 Lost=0 | AvgOneWayDelay=10.0054 ms | FlowMonTp=0.0044 Mbps
+============================================================
